@@ -1,0 +1,94 @@
+:root {
+  --bg: #233553;
+  --black: #17181a;
+  --dark-grey: #222427;
+  --grey: #595a5c;
+  --orange: #ff9502;
+  --green: #2dc973;
+  --red: #e5404a;
+  --dark-red: #2d191e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#calculator {
+  background-color: var(--black);
+  padding: 20px;
+  min-width: 300px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+}
+
+#display-container {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+#formula {
+  color: var(--grey);
+}
+
+#display {
+  font-size: 30px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  min-height: 325px;
+}
+
+button {
+  padding: 5px;
+  background-color: var(--dark-grey);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+.operator {
+  background-color: var(--orange);
+}
+
+#clear {
+  color: var(--red);
+  background-color: var(--dark-red);
+}
+
+#equals {
+  background-color: var(--green);
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
